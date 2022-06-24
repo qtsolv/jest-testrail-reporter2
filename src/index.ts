@@ -1,3 +1,6 @@
-export default function sayHello(name: string) {
-  console.log(`Hello, ${name}!`);
-}
+import JestTestRailReporter from "./JestTestRailReporter";
+
+export * from "./IJestTestRailReporterOptions";
+export * from "./JestTestRailReporter";
+
+export default JestTestRailReporter;
