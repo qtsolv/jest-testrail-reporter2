@@ -2,6 +2,9 @@
 
 Reporter for [Jest](https://jestjs.io/) to create test runs in [TestRail](https://www.gurock.com/testrail/), link test cases and update their status automatically.
 
+[![npm](https://img.shields.io/npm/dm/jest-testrail-reporter2)](https://www.npmjs.com/package/squerge)
+[![npm](https://img.shields.io/npm/v/jest-testrail-reporter2)](https://www.npmjs.com/package/squerge)
+
 ### Installation
 
 To install the library in your project, use below command:
