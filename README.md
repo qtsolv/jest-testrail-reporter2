@@ -15,7 +15,26 @@ yarn add jest-testrail-reporter2 --dev
 
 ### Usage
 
-Just include the reporter in your `jest.config.js` as follows:
+You need to add the case ID in your test title anywhere (preferable in the beginning).
+
+```js
+// C001 is the case ID below
+test("C001 - This is an example test", () => {
+  // ... your assertions
+});
+
+// or you can put it in the end
+test("This is an example test - C001", () => {
+  // ... your assertions
+});
+
+// or maybe anywhere, first match to C\d+ will be used
+test("This is C001 test", () => {
+  // ... your assertions
+});
+```
+
+Finally, include the reporter in your `jest.config.js` as follows:
 
 ```js
 {
