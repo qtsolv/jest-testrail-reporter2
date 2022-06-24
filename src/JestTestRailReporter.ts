@@ -35,7 +35,7 @@ export class JestTestRailReporter implements Reporter {
       await this.api.updateRun(this.testRun!.id, {
         case_ids: cases.map(({ caseId }) => caseId),
       });
-      const statusIds = this.options.statusIds || {
+      const statusIds = this.options.statusIds ?? {
         "disabled": 2, // blocked
         "failed": 5, // failed
         "passed": 1, // passed
