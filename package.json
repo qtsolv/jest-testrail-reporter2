@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "name": "jest-testrail-reporter",
+  "name": "jest-testrail-reporter2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qtsolv/jest-testrail-reporter.git"

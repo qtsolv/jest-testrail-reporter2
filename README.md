@@ -1,4 +1,4 @@
-# jest-testrail-reporter
+# jest-testrail-reporter2
 
 Reporter for [Jest](https://jestjs.io/) to create test runs in [TestRail](https://www.gurock.com/testrail/), link test cases and update their status automatically.
 
@@ -7,10 +7,10 @@ Reporter for [Jest](https://jestjs.io/) to create test runs in [TestRail](https:
 To install the library in your project, use below command:
 
 ```shell
-npm install jest-testrail-reporter --save-dev
+npm install jest-testrail-reporter2 --save-dev
 
 # or using Yarn
-yarn add jest-testrail-reporter --dev
+yarn add jest-testrail-reporter2 --dev
 ```
 
 ### Usage
@@ -23,7 +23,7 @@ Just include the reporter in your `jest.config.js` as follows:
 
     // ... other reporters
 
-    ["jest-testrail-reporter", {
+    ["jest-testrail-reporter2", {
       host: 'https://yourorg.testrail.io',
       username: 'name@example.com',
       password: 'password' || 'api key',
