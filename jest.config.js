@@ -112,6 +112,15 @@ module.exports = {
       host: process.env.TESTRAIL_HOST,
       username: process.env.TESTRAIL_USERNAME,
       password: process.env.TESTRAIL_PASSWORD,
+      project: {
+        id: process.env.TESTRAIL_PROJECT_ID,
+      },
+      testRun: {
+        name() {
+          return "Example Run #" + new Date().getTime();
+        },
+        description: "Example description for test run.",
+      },
     }],
   ],
 
