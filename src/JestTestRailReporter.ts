@@ -7,13 +7,23 @@ export class JestTestRailReporter implements Reporter {
   private readonly api: TestRail;
   private testRun?: TestRail.Run;
 
-  constructor(_: Config.GlobalConfig, private options: IJestTestRailReporterOptions) {
+  constructor(_: Config.GlobalConfig, private options?: IJestTestRailReporterOptions) {
     if (!options) {
       throw new Error("Please specify reporter options.")
     }
 
-    if (!options.host || !options.username || !options.password) {
-      throw new Error("Please ensure host, username & password options are set.")
+    ["host", "username", "password", "project", "testRun"].forEach((key) => {
+      if (!options.hasOwnProperty(key)) {
+        throw new Error(`Please set '${key}' reporter option.`);
+      }
+    });
+
+    if (!options!.project.id) {
+      throw new Error(`Please set 'project.id' reporter option.`);
+    }
+
+    if (!options!.testRun.name) {
+      throw new Error(`Please set 'testRun.name' reporter option.`);
     }
 
     this.api = new TestRail({
@@ -35,7 +45,7 @@ export class JestTestRailReporter implements Reporter {
       await this.api.updateRun(this.testRun!.id, {
         case_ids: cases.map(({ caseId }) => caseId),
       });
-      const statusIds = this.options.statusIds ?? {
+      const statusIds = this.options!.statusIds ?? {
         "disabled": 2, // blocked
         "failed": 5, // failed
         "passed": 1, // passed
@@ -60,7 +70,7 @@ export class JestTestRailReporter implements Reporter {
     const {
       project: { id: projectId },
       testRun: { name: testRunName, description: testRunDescription },
-    } = this.options;
+    } = this.options!;
     const project = await this.api.getProject(projectId);
     const name = typeof testRunName === "function" ? testRunName() : testRunName;
     const description = typeof testRunDescription === "function" ? testRunDescription() : testRunDescription;
