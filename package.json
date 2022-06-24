@@ -1,0 +1,34 @@
+{
+  "author": {
+    "name": "Vaibhav Pandey",
+    "email": "vaibhav.pandey@qtsolv.com",
+    "url": "https://vaibhavpandey.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/qtsolv/jest-testrail-reporter/issues"
+  },
+  "description": "Reporter for Jest to automatically create test runs in Testrail.",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "homepage": "https://github.com/qtsolv/jest-testrail-reporter#readme",
+  "keywords": [
+    "automation",
+    "jest",
+    "qa",
+    "reporter",
+    "testrail"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "jest-testrail-reporter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qtsolv/jest-testrail-reporter.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.2"
+}
