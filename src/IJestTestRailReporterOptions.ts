@@ -11,6 +11,7 @@ export type IJestTestRailReporterOptions = {
     name: string | StringGetter,
     description?: string | StringGetter,
   };
+  testSuite?: { id: number | undefined };
 };
 
 export default IJestTestRailReporterOptions;

@@ -77,6 +77,7 @@ export class JestTestRailReporter implements Reporter {
     this.testRun = await this.api.addRun(project.id, {
       name,
       description,
+      suite_id: this.options?.testSuite?.id,
     });
   }
 
