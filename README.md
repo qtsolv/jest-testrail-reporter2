@@ -79,6 +79,8 @@ Possible options and their respective types/values are as below:
 | testRun             | `map`              | :white_check_mark: |                   |
 | testRun.name        | `string, function` | :white_check_mark: |                   |
 | testRun.description | `string, function` | :x:                |                   |
+| testSuite           | `map`              | :x:                |                   |
+| testSuite.id        | `number`           | :x:                |                   |
 
 ### License
 
