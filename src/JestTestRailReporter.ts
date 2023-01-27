@@ -43,7 +43,7 @@ export class JestTestRailReporter implements Reporter {
       });
     if (cases.length) {
       await this.api.updateRun(this.testRun!.id, {
-	include_all: false,
+				include_all: false,
         case_ids: cases.map(({ caseId }) => caseId),
       });
       const statusIds = this.options!.statusIds ?? {
